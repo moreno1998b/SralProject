@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Perfil</title>
+    <link rel="stylesheet" href="resources/styles/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/b6764a4d50.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="resources/style/style.css">
+</head>
+<script>
+    $(document).ready(function () {
+
+        $('.ir-arriba').click(function () {
+            $('body, html').animate({
+                scrollTop: '0px'
+            }, 300);
+        });
+
+        $(window).scroll(function () {
+            if ($(this).scrollTop() > 0) {
+                $('.goto').slideDown(600);
+            } else {
+                $('.goto').slideUp(600);
+            }
+        });
+
+    });
+</script>
+
+<body>
+    <div class="container-fluid">
+        <header class="bg-primary">
+            <a href="#" > <img id="logo"  src="resources/img/LOGO5.png"  /></a>
+        </header>
+
+        <article class="container-fluid">
+            <div class="row card card_profile">
+                <div class="card_photo col-md-3">
+                    <div class="card" style="width: 19.5rem;">
+                        <img src="resources/img/UserAvatar.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">NOMBRE COMPLETO: </h5>
+                            <p class="card-text">Jane Doe Wilston</p>
+                            <h5 class="card-title">EDAD: </h5>
+                            <p class="card-text">23 Años</p>
+
+
+                        </div>
+                    </div>
+                </div>
+                <div class="card_info col-md-9">
+                    <div class="col-md-12">
+                        <div class="text-left font-weight-light pt-4 ">
+                            <h1>Información Personal</h1>
+                        </div>
+                        <div class="Info pt-4">
+                            <div class="col-md-4">
+                                <label for="validationDefault01" class="form-label">Identificación:</label>
+                                <output><strong> 1.147.243.875 </strong></output>
+                            </div>
+                            <div class="col-md-4">
+                                <label for="validationDefault01" class="form-label">Nombres:</label>
+                                <output><strong> Jane </strong></output>
+                            </div>
+                            <div class="col-md-4">
+                                <label for="validationDefault01" class="form-label">Apellidos:</label>
+                                <output><strong> Doe Wilston</strong></output>
+                            </div>
+                            <div class="col-md-4">
+                                <label for="validationDefault01" class="form-label">Sexo:</label>
+                                <output><strong> Masculino </strong></output>
+                            </div>
+                            <div class="col-md-4">
+                                <label for="validationDefault01" class="form-label">Fecha de Nacimiento: <label
+                                        style="font-size: 10px;color: gray;"> yyyy/mm/dd</label></label>
+                                <br />
+                                <output><strong> 1998/08/05 </strong></output>
+                            </div>
+                            <div class="col-md-4">
+                                <label for="validationDefault01" class="form-label">Correo Electrónico:</label>
+                                <output><strong> jane.doew@gmail.com </strong></output>
+                            </div>
+                            <div class="col-md-4">
+                                <label for="validationDefault01" class="form-label">Celular:</label>
+                                <output><strong>3294506730 </strong></output>
+                            </div>
+                            <div class="col-md-4">
+                                <label for="validationDefault01" class="form-label">Contraseña Actual:</label>
+                                <output><strong> Geranios1821 </strong></output>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mb-3 text-right">
+                        <a href="changePasswordUser.html" class="badge badge-primary">Cambiar mi contraseña de
+                            ingreso!</a>
+                    </div>
+                </div>
+            </div>
+
+        </article>
+    </div>
+    <footer>
+
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reporteria</title>
+    <link rel="stylesheet" href="resources/styles/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/b6764a4d50.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="resources/style/style.css">
+</head>
+<script>
+    $(document).ready(function () {
+
+        $('.ir-arriba').click(function () {
+            $('body, html').animate({
+                scrollTop: '0px'
+            }, 300);
+        });
+
+        $(window).scroll(function () {
+            if ($(this).scrollTop() > 0) {
+                $('.goto').slideDown(600);
+            } else {
+                $('.goto').slideUp(600);
+            }
+        });
+
+    });
+</script>
+
+<body>
+    <div class="container-fluid">
+        <header class="bg-primary">
+            <a href="#" > <img id="logo"  src="resources/img/LOGO5.png"  /></a>
+        </header>
+
+        <article class="container-fluid">
+            <div class="row menuInformes">
+                <div class="col-md-3">
+                    <label for="validationDefault04" class="form-label">Informe:</label>
+                    <div class="input-group">
+                        <select class="form-select w-100" id="validationDefault04" required>
+                            <option selected disabled value="">Seleccione</option>
+                            <option>Informe de Asistencia a Eventos de formación</option>
+                            <option>Informe de Asistencia a Eventos de Capacitación</option>
+                            <option>Informe de Asistencia a Ponencia Tecnológica</option>
+                            <option>Informe de Registro Login Usuarios</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <label for="validationDefault03" class="form-label">Fecha de Inicio:</label>
+                    <input type="date" class="form-control" id="validationDefault03" required>
+                </div>
+                <div class="col-md-3">
+                    <label for="validationDefault03" class="form-label">Fecha de Fin:(Opcional)</label>
+                    <input type="date" class="form-control" id="validationDefault03">
+                </div>
+                <div class="col-md-3 text-center">
+                    <button class="btn btn-success" style="margin-top: 5%;" type="submit">Generar Informe</button>
+                </div>
+            </div>
+            <div class="row reporter table-responsive">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Codigo</th>
+                            <th>Nombre Informe</th>
+                            <th>Rango Fecha Inicial</th>
+                            <th>Rango Fecha Final</th>
+                            <th>Fecha Generado</th>
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Informe de Asistencia a Eventos de formación</td>
+                            <td>28/08/2021</td>
+                            <td>29/08/2021</td>
+                            <td>29/08/2021</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Informe de Asistencia a Eventos de Capacitación</td>
+                            <td>25/08/2021</td>
+                            <td>28/08/2021</td>
+                            <td>28/08/2021</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Informe de Asistencia a eventos de formación</td>
+                            <td>20/08/2021</td>
+                            <td>22/08/2021</td>
+                            <td>22/08/2021</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Informe de Asistencia a eventos de formación</td>
+                            <td>15/08/2021</td>
+                            <td>16/08/2021</td>
+                            <td>16/08/2021</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>Informe de Asistencia a eventos de formación</td>
+                            <td>25/08/2021</td>
+                            <td>28/08/2021</td>
+                            <td>29/08/2021</td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>Informe de Asistencia a eventos de formación</td>
+                            <td>28/08/2021</td>
+                            <td>29/08/2021</td>
+                            <td>29/08/2021</td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td>Informe de Asistencia a eventos de formación</td>
+                            <td>28/08/2021</td>
+                            <td>29/08/2021</td>
+                            <td>29/08/2021</td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+        </article>
+    </div>
+    <footer>
+
+
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

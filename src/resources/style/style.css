@@ -1,0 +1,246 @@
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .logincard {
+    padding-top: 1%;
+    padding-bottom: 2%;
+  }
+}
+.logincard {
+  margin-top: 10%;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .logincard {
+    padding-top: 1%;
+    padding-bottom: 2%;
+    /* background-color: yellow; */
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .logincard {
+    padding-top: 1%;
+    padding-bottom: 2%;
+    /* background-color: greenyellow; */
+    width: 60%;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .logincard {
+    padding-top: 1%;
+    padding-bottom: 2%;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .logincard {
+    padding-top: 1%;
+    padding-bottom: 2%;
+
+    width: 30%;
+  }
+}
+
+header {
+  width: 100%;
+  height: 70px;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  footer {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: space-between;
+    justify-content: space-evenly;
+    align-items: center;
+    /* margin-top: 15%; */
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  footer {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: space-between;
+    justify-content: space-evenly;
+    align-items: center;
+    /* margin-top: 16%; */
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  footer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: space-between;
+    justify-content: space-evenly;
+    align-items: center;
+    /* margin-top: 18%; */
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  footer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: space-between;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  footer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: space-between;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+}
+footer {
+  background-color: #007bff;
+  padding-bottom: 0%;
+  color: white;
+  margin-top: 2%!important;
+}
+@media only screen and (max-width: 600px) {
+  .logincard {
+    padding-top: 1%;
+    padding-bottom: 2%;
+  }
+}
+.logincard {
+  margin-top: 10%;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .formRegistro {
+    padding-top: 1%;
+    padding-bottom: 2%;
+    /* background-color: yellow; */
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .formRegistro {
+    padding-top: 1%;
+    padding-bottom: 2%;
+    /* background-color: greenyellow; */
+    width: 60%;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .formRegistro {
+    padding-top: 1%;
+    padding-bottom: 2%;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .formRegistro {
+    padding-top: 1%;
+    padding-bottom: 2%;
+
+    width: 50%;
+  }
+}
+.formRegistro {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  padding: 2% 1% 2% 1%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: space-between;
+  justify-content: center;
+}
+.flex {
+  padding: 2% 1% 2% 1%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: space-between;
+  justify-content: center;
+}
+.userdata {
+  border: 2px solid;
+  padding-left: 1%;
+  padding-right: 1%;
+  padding-bottom: 6px;
+  border-radius: 5px;
+  background-color: #ecececbf !important;
+}
+.card_profile {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: stretch;
+  justify-content: space-evenly;
+  margin-top: 1%;
+}
+.reporter {
+  height: 60vh;
+  overflow-y: auto;
+}
+.menuInformes {
+  margin-top: 5px;
+  border: 1px solid #ececec;
+  border-radius: 5px;
+  margin-bottom: 5px;
+  background-color: #ecececbf;
+  padding: 5px 0px 5px 0px;
+}
+#logo {
+  width: 100px;
+  height: 70px;
+}
+.cardSection {
+  background-image: url("../img/servers.jpg");
+  background-repeat: no-repeat;
+}
+.subtitle {
+  color: white !important;
+  font-weight: 400;
+}
+.aboutUsTitle {
+  color: #005686;
+  margin-bottom: 4%;
+  font-weight: bold;
+}
+.actualizadoel {
+  margin-bottom: 5%;
+}
+.leermas {
+  margin-top: 6%;
+}
+
+#aboutus {
+  margin-bottom: 5%;
+}
+
+
+#whyus{
+  margin-bottom: 5%;
+}
