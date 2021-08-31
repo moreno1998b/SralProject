@@ -11,31 +11,32 @@
         integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/b6764a4d50.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="resources/style/style.css">
+    <script>
+        $(document).ready(function () {
+    
+            $('.ir-arriba').click(function () {
+                $('body, html').animate({
+                    scrollTop: '0px'
+                }, 300);
+            });
+    
+            $(window).scroll(function () {
+                if ($(this).scrollTop() > 0) {
+                    $('.goto').slideDown(600);
+                } else {
+                    $('.goto').slideUp(600);
+                }
+            });
+    
+        });
+    </script>
 </head>
-<script>
-    $(document).ready(function () {
 
-        $('.ir-arriba').click(function () {
-            $('body, html').animate({
-                scrollTop: '0px'
-            }, 300);
-        });
-
-        $(window).scroll(function () {
-            if ($(this).scrollTop() > 0) {
-                $('.goto').slideDown(600);
-            } else {
-                $('.goto').slideUp(600);
-            }
-        });
-
-    });
-</script>
 
 <body>
     <div class="container-fluid">
         <header class="bg-primary">
-            <a href="#" > <img id="logo"  src="resources/img/LOGO5.png"  /></a>
+            <a href="#" > <img id="logo" alt="Logo"  src="resources/img/LOGO5.png"  /></a>
         </header>
 
         <article>
