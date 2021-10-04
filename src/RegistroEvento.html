@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Eventos </title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/b6764a4d50.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="resources/style/style.css">
+
+</head>
+
+
+<body>
+    <div class="container-fluid">
+        <header class="bg-primary">
+            <a href="#"> <img id="logo" alt="Logo" src="resources/img/LOGO5.png" /></a>
+        </header>
+
+        <article>
+            <div class="text-center font-weight-light pt-5 ">
+                <h1>Registro de Proximos Eventos</h1>
+            </div>
+            <div class="flex">
+                <div class="card text-primary font-weight-normal formRegistro">
+                    <form class="row g-3" method="POST" action="http://localhost:4000/evento">
+
+
+                        <div class="col-md-12">
+                            <label for="temaEvento" class="form-label">Tema del evento:</label>
+                            <input type="text" class="form-control" id="temaEvento" name="temaEvento" required>
+                        </div>
+                        <div class="col-md-12">
+                            <label for="capacitadoresParticipantes" class="form-label">Seleccione el Conferencista del
+                                evento:</label>
+                            <div class="col-md-12 text-right">
+                                <select style="width: 60%;" class="form-select" 
+                                    aria-label="multiple select example"  id="capacitadoresParticipantes"
+                                    name="capacitadoresParticipantes" required>
+                                    <option disabled>Seleccione</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="fechaEvento" class="form-label">Fecha del evento:</label>
+                            <input type="date" class="form-control" id="fechaEvento" name="fechaEvento" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="duracion" class="form-label">Duración del evento (en minutos):</label>
+                            <input type="number" class="form-control" id="duracion" name="duracion" required>
+                        </div>
+
+                        <div class="col-12 text-center">
+                            <button class="btn btn-primary" type="submit">Guardar Registro</button>
+                        </div>
+                    </form>
+                </div>
+                <div id="list">
+                    <div class="col-12 text-center pt-4">
+                        <h1 class="text-primary">Eventos Registrados</h1>
+                    </div>
+                    <table class="table text-center table-success table-striped" id="dtTable">
+                        <thead>
+                            <tr>
+                                <th scope="col">Tema Evento</th>
+                                <th scope="col">Fecha del evento</th>
+                                <th scope="col">Duracion</th>
+
+                                <th scope="col" class="text-center">Accion</th>
+                            </tr>
+                        </thead>
+                        <tbody id="bodyTableAdmins">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </article>
+    </div>
+    <footer>
+
+
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+        crossorigin="anonymous"></script>
+    <script type="text/javascript" src="resources/js/eventoController.js"></script>
+    <script>
+        $(document).ready(function () {
+
+            $('.ir-arriba').click(function () {
+                $('body, html').animate({
+                    scrollTop: '0px'
+                }, 300);
+            });
+
+            $(window).scroll(function () {
+                if ($(this).scrollTop() > 0) {
+                    $('.goto').slideDown(600);
+                } else {
+                    $('.goto').slideUp(600);
+                }
+            });
+
+        });
+    </script>
+</body>
+
+</html>
