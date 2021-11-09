@@ -84,7 +84,7 @@ function guardarCambiosAyudante() {
         JSON.stringify('identificacion') + ':' + JSON.stringify(identificacion) + ',' +
         JSON.stringify('fechaNacimiento') + ':' + JSON.stringify(fechaNacimiento) + ',' +
         JSON.stringify('correo') + ':' + JSON.stringify(correo) + ',' +
-        JSON.stringify('sexo') + ':' + JSON.stringify(sexo) + ',' +
+        JSON.stringify('sexo') + ':' + JSON.stringify(sexo) + ',' + 
         JSON.stringify('codigoAyudante') + ':' + JSON.stringify(codigoAyudante) + ',' +
         JSON.stringify('password') + ':' + JSON.stringify(password) + ',' +
         JSON.stringify('celular') + ':' + JSON.stringify(celular) + '}';
