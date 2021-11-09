@@ -179,7 +179,7 @@ h1, .h1 {
 }
 
 .dashboard-nav {
-    background-color: #443ea2;
+    background-color: #006DA1;
 }
 
 .dashboard-nav a {
@@ -348,12 +348,12 @@ h1, .h1 {
     -webkit-justify-content: center;
     -ms-flex-pack: center;
     justify-content: center;
-    color: #443ea2;
+    color: #006DA1;
 }
 
 .menu-toggle:hover, .menu-toggle:active, .menu-toggle:focus {
     text-decoration: none;
-    color: #875de5;
+    color:  #00ADF4;
 }
 
 .menu-toggle i {
