@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio</title>
+    <link rel="stylesheet" href="resources/style/menu.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/b6764a4d50.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="resources/style/style.css">
+
+</head>
+
+
+<body>
+    <div class="container-fluid">
+      
+        <body>
+
+
+
+
+            <div class='dashboard'>
+                <div class="dashboard-nav">
+                    <header><a href="#!" class="menu-toggle"><i class="fas fa-bars"></i></a><a href="#"
+                            class="brand-logo"><i class="fas fa-anchor"></i> <span>BRAND</span></a></header>
+                            <nav class="dashboard-nav-list">
+                                <div class="dashboard-nav-item ">
+                                    <a href="Inicio.html"><i class="fas fa-home"></i>
+                                        Inicio </a>
+                                </div>
+                                <div class="dashboard-nav-item" id="verEventos">
+                                    <a href="MisEventos.html"><i class="fas fa-calendar"></i> Ver Eventos </a>
+                                </div>
+                                <div class="dashboard-nav-item" id="regEventos">
+                                    <a href="RegistroEvento.html"><i class="fas fa-cogs"></i> Registrar Eventos </a>
+                                </div>
+                                <div class="dashboard-nav-item" id="regConferencistas">
+                                    <a href="#"><i class="fas fa-cogs"></i> Registrar Conferencistas </a>
+                                </div>
+                                <div class="dashboard-nav-item" id="regAyudantes">
+                                    <a href="#"><i class="fas fa-cogs"></i> Registrar Ayudantes </a>
+                                </div>
+                                <div class="dashboard-nav-item" id="regAsistentesEventos">
+                                    <a href="RegistroAsistentesEvento.html"><i class="fas fa-cogs"></i> Inscribir Asistentes a Eventos </a>
+                                </div>
+                                <div class="dashboard-nav-item" id="miPerfil">
+                                    <a href="PerfilUsuario.html"><i class="fas fa-user"></i> Mi Perfil </a>
+                                </div>
+                                <div class="dashboard-nav-item active" id="regControlAsistentes">
+                                    <a href="RegistroAsistentes.html"><i class="fas fa-user"></i> Registrar Asistentes </a>
+                                </div>
+                                <div class="dashboard-nav-item active" id="regAsistentesRolAyudante">
+                                    <a href="RegistroAsistentes.html"><i class="fas fa-user"></i> Registrar Asistentes </a>
+                                </div>
+                                <div class="nav-item-divider"></div>
+                                <div class="dashboard-nav-item text-left pl-2 pt-1" style="    display: flex;
+                                                flex-direction: column;">
+                                    <div class="col md-12">
+                                        <h4 class="text-left pl-0 text-light"><strong>Bienvenido! </strong></h4>
+                                    </div>
+                                    <div class="col md-12 text-light text-uppercase">
+                                        <output id="nameUserSesion"></output><br></br>
+                                        <output id="rol" class="pt-0" style="font-size: 10px;font-weight: 400;"></output>
+                                    </div>
+                                </div>
+                                <div class="nav-item-divider"></div>
+                                <div class="dashboard-nav-item">
+                                    <a href="#" onclick="cerrarSesion();"><i class="fas fa-sign-out-alt"></i> Logout </a>
+                                </div>
+                            </nav>
+                </div>
+                <div class='dashboard-app'>
+                    <header class='dashboard-toolbar'><a href="#!" class="menu-toggle"><i class="fas fa-bars"></i></a>
+                    </header>
+                    <div class='dashboard-content'>
+                        <div class="text-center font-weight-light pt-5 ">
+                            <h1>Registro de Asistentes a Proximos Eventos</h1>
+                        </div>
+                        <div class="card col md-12  text-center">
+                            <form class="row g-12">
+                                <div class="col-md-12">
+                                    <label for="validationDefault06" class="form-label font-weight-bold">Buscar Asistente:</label>
+                                    <input type="text" placeholder="Digite el documento del asistente a registrar"
+                                        class="form-control" id="documentoDigitado" name="documentoDigitado" required>
+                                </div>
+                                <div class="col-md-3 text-center pt-5">
+                                    <button class="btn btn-primary" type="button" onclick="buscarAsistentePorDocumento();">Buscar
+                                        Asistente</button>
+                                </div>
+                                <div class="col-md-12 pt-5">
+                                    <h4>Asistente encontrado: </h4>
+                                    <div class="form-check" id="checkAsistente">
+                                       
+                                      </div>
+                                </div>
+                                <div class=" col-md-12 pb-3" style="padding-top: 1%;">
+                                    <label for="validationDefault07" class="form-label">Evento al que asiste:</label>
+                                    <select class="form-select" id="eventoAsistencia" name="eventoAsistencia"  required>
+                                        <option selected disabled value="">Seleccionar un Evento</option>
+                        
+                                    </select>
+                                </div>
+            
+            
+            
+                                <div class="col-md-12 text-center pt-5 pb-4">
+                                    <button class="btn btn-success" type="button" onclick="asociarAsistenteAEvento();">Guardar Asociación
+                                        </button>
+                                </div>
+                            </form>
+            
+                        </div>
+                    
+                    </div>
+                </div>
+            </div>
+    
+        
+        
+        
+        </body>
+
+
+
+
+
+
+    
+
+
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+        crossorigin="anonymous"></script>
+    <script type="text/javascript" src="resources/js/loginController.js"></script>
+    <script type="text/javascript" src="resources/js/menu.js"></script>
+    <script>
+        window.onload = function () {
+
+            buscarDataUserSesion();
+        }
+    </script>
+    <script>
+        $(document).ready(function () {
+
+            $('.ir-arriba').click(function () {
+                $('body, html').animate({
+                    scrollTop: '0px'
+                }, 300);
+            });
+
+            $(window).scroll(function () {
+                if ($(this).scrollTop() > 0) {
+                    $('.goto').slideDown(600);
+                } else {
+                    $('.goto').slideUp(600);
+                }
+            });
+
+        });
+    </script>
+</body>
+
+</html>

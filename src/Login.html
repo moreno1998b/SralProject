@@ -18,7 +18,7 @@
 <body>
     <div class="container-fluid">
         <header class="bg-primary">
-            <a href="#"> <img id="logo" alt="Logo" src="resources/img/LOGO5.png" /></a>
+            <a href="Home.html"> <img id="logo" alt="Logo" src="resources/img/LOGO5.png" /></a>
         </header>
 
         <article>
@@ -26,7 +26,7 @@
 
             <div class="row">
                 <div class="col-sm-12">
-                    <div  id="logincard" class="logincard card container ">
+                    <div id="logincard" class="logincard card container ">
                         <form>
                             <div class="mb-3">
                                 <label for="correo" class="form-label font-weight-bold text-primary">Correo
@@ -37,23 +37,36 @@
                             <div class="mb-3">
                                 <label for="password"
                                     class="form-label  font-weight-bold text-primary">Contraseña</label>
-                                <input type="password" class="form-control" id="password" name="password" required >
+                                <input type="password" class="form-control" id="password" name="password" required>
                             </div>
-
+                            <div class="mb-3">
+                                <h5>Ingresar como :</h5>
+                              
+                                    <label for="validationDefault07" class="form-label"></label>
+                                    <select class="form-select" id="rolUser" name="rolUser" required>
+                                        <option selected disabled value="#">Seleccione</option>
+                                        <option value="1">Asistente</option>
+                                        <option value="2">Administrador</option>
+                                        <option value="3">Ayudante</option>
+                                        <option value="4">Conferencista</option>
+                                    </select>
+                      
+                            </div>
                             <div class="mb-3 text-center">
                                 <button type="button" class="btn btn-primary"
                                     onclick="iniciarSesion()">Ingresar</button>
                             </div>
                             <div class="mb-3 text-left">
-                                <a href="RegistroAsistentes.html" class="badge badge-primary">Registrarme!</a>
+                                <a href="Registrarme.html" class="badge badge-primary">Registrar Asistentes</a>
                             </div>
 
                         </form>
                     </div>
                     <div id="errCard"></div>
-                   
+
                 </div>
             </div>
+
         </article>
     </div>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"

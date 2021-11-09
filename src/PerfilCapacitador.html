@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Perfil</title>
+    <link rel="stylesheet" href="resources/styles/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/b6764a4d50.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="resources/style/style.css">
+    <script>
+        $(document).ready(function () {
+    
+            $('.ir-arriba').click(function () {
+                $('body, html').animate({
+                    scrollTop: '0px'
+                }, 300);
+            });
+    
+            $(window).scroll(function () {
+                if ($(this).scrollTop() > 0) {
+                    $('.goto').slideDown(600);
+                } else {
+                    $('.goto').slideUp(600);
+                }
+            });
+    
+        });
+    </script>
+</head>
+
+
+<body>
+    <div class="container-fluid">
+        <header class="bg-primary">
+            <a href="#" > <img id="logo"  alt="Logo" src="resources/img/LOGO5.png"  /></a>
+        </header>
+
+        <article class="container-fluid">
+            <div class="row card card_profile">
+                <div class="card_photo col-md-3">
+                    <div class="card" style="width: 19.5rem;">
+                        <img src="resources/img/UserAvatar.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">NOMBRE COMPLETO: </h5>
+                            <p class="card-text" id="nameCard"></p>
+                            <h5 class="card-title">PROFESIÓN: </h5>
+                            <p class="card-text" id="profesionCard"></p>
+
+
+                        </div>
+                    </div>
+                </div>
+                <div class="card_info col-md-9">
+                    <div class="col-md-12">
+                        <div class="text-left font-weight-light pt-4 ">
+                            <h1>Información Personal</h1>
+                        </div>
+                        <div class="Info pt-4">
+                            <div class="col-md-4">
+                                <label id="identificacion" class="form-label">Identificación:</label>
+                                <output id="identifacionSalida"><strong>  </strong></output>
+                            </div>
+                            <div class="col-md-4">
+                                <label id="validationDefault02" class="form-label">Nombres:</label>
+                                <output id="nombreSalida"><strong>  </strong></output>
+                            </div>
+                            <div class="col-md-4">
+                                <label id="validationDefault03" class="form-label">Apellidos:</label>
+                                <output id="apellidoSalida"><strong> </strong></output>
+                            </div>
+                            <div class="col-md-4">
+                                <label id="validationDefault04" class="form-label">Sexo:</label>
+                                <output id="sexoSalida"><strong>  </strong></output>
+                            </div>
+                            <div class="col-md-4">
+                                <label id="validationDefault05" class="form-label">Fecha de Nacimiento: <span
+                                        style="font-size: 10px;color: gray;"> yyyy/mm/dd</span></label>
+                                <br />
+                                <output id="fechaNacimientoSalida"><strong>  </strong></output>
+                            </div>
+                            <div class="col-md-4">
+                                <label id="validationDefault06" class="form-label">Correo Electrónico:</label>
+                                <output id="correoSalida"><strong>  </strong></output>
+                            </div>
+                            <div class="col-md-4">
+                                <label id="validationDefault07" class="form-label">Celular:</label>
+                                <output id="celularSalida"><strong> </strong></output>
+                            </div>
+                            <div class="col-md-4">
+                                <label id="validationDefault08" class="form-label">Contraseña Actual:</label>
+                                <output id="passwordSalida"><strong>  </strong></output>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mb-3 text-right">
+                        <a href="changePasswordUser.html" class="badge badge-primary">Cambiar mi contraseña de
+                            ingreso!</a>
+                    </div>
+                </div>
+            </div>
+            <div class="row card ">
+                <div id="listCapacitaciones">
+                    <div class="col-12 text-left pt-4">
+                        <h4 class="text-primary">Participación en Eventos</h4>
+                    </div>
+                    <table class="table text-center table-primary table-striped" id="dtTable">
+                        <thead>
+                            <tr>
+                                <th scope="col">Tema del Evento</th>
+                                <th scope="col">Fecha del Evento</th>
+                                <th scope="col">Duración (en min)</th>
+                           
+                            </tr>
+                        </thead>
+                        <tbody id="bodyTableEventosRealizados">
+                        </tbody>
+                    </table>
+                </div>
+                </div>
+        </article>
+    </div>
+    <footer>
+
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+        crossorigin="anonymous"></script>
+        <script type="text/javascript" src="resources/js/conferencistaController.js"></script>
+</body>
+ 
+</html>

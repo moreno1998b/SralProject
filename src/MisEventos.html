@@ -11,9 +11,9 @@
         integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/b6764a4d50.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="resources/style/style.css">
+    <link rel="stylesheet" href="resources/style/calendar.css">
 
 </head>
-
 
 <body>
     <div class="container-fluid">
@@ -34,7 +34,7 @@
                                 <a href="Inicio.html"><i class="fas fa-home"></i>
                                     Inicio </a>
                             </div>
-                            <div class="dashboard-nav-item" id="verEventos">
+                            <div class="dashboard-nav-item active" id="verEventos">
                                 <a href="MisEventos.html"><i class="fas fa-calendar"></i> Ver Eventos </a>
                             </div>
                             <div class="dashboard-nav-item" id="regEventos">
@@ -58,7 +58,7 @@
                             <div class="dashboard-nav-item" id="regbuscarAsistentesEventos">
                                 <a href="buscarAsistentesEventos.html"><i class="fas fa-search"></i> Ver Asistentes a Eventos </a>
                             </div>
-                            <div class="dashboard-nav-item active" id="miPerfil">
+                            <div class="dashboard-nav-item" id="miPerfil">
                                 <a href="PerfilUsuario.html"><i class="fas fa-user"></i> Mi Perfil </a>
                             </div>
                             <div class="dashboard-nav-item" id="regControlAsistentes">
@@ -87,84 +87,52 @@
                     <div class='dashboard-app'>
                         <header class='dashboard-toolbar'><a href="#!" class="menu-toggle"><i class="fas fa-bars"></i></a>
                         </header>
-                        <div class='dashboard-content'>
-                            <div class="row card card_profile">
-                                <div class="card_photo col-md-3">
-                                    <div class="card" style="width: 19.5rem;">
-                                        <img src="resources/img/UserAvatar.png" class="card-img-top" alt="...">
-                                        <div class="card-body">
-                                            <h5 class="card-title">NOMBRE COMPLETO: </h5>
-                                            <p class="card-text" id="nameCard"></p>
-                                     
-                
-                
+                        <div class='dashboard-content bg-light'>
+                          
+                                <div class="col-md-12">
+                                    <h1 class="text-primary">Buscar eventos</h1>
+                                    <form class="row g-3">
+                                        <div class="col-md-6">
+                                            <label for="validationDefault06" class="form-label font-weight-bold">Mes de
+                                                busqueda:</label>
+                                            <input type="month" class="form-control" id="mesbusqueda" name="mesbusqueda" required>
                                         </div>
-                                    </div>
+                                        <div class="col-md-3 text-center pt-5">
+                                            <button class="btn btn-primary" type="button" onclick="buscarEventos();">Buscar
+                                                Eventos</button>
+                                        </div>
+                                    </form>
                                 </div>
-                                <div class="card_info col-md-9">
-                                    <div class="col-md-12">
-                                        <div class="text-left font-weight-light pt-4 ">
-                                            <h1>Información Personal</h1>
-                                        </div>
-                                        <div class="Info pt-4">
-                                            <div class="col-md-4">
-                                                <label id="identificacion" class="form-label">Identificación:</label>
-                                                <output id="identifacionSalida"><strong>  </strong></output>
-                                            </div>
-                                            <div class="col-md-4">
-                                                <label id="validationDefault02" class="form-label">Nombres:</label>
-                                                <output id="nombreSalida"><strong>  </strong></output>
-                                            </div>
-                                            <div class="col-md-4">
-                                                <label id="validationDefault03" class="form-label">Apellidos:</label>
-                                                <output id="apellidoSalida"><strong> </strong></output>
-                                            </div>
-                                            <div class="col-md-4">
-                                                <label id="validationDefault04" class="form-label">Sexo:</label>
-                                                <output id="sexoSalida"><strong>  </strong></output>
-                                            </div>
-                                            <div class="col-md-4">
-                                                <label id="validationDefault05" class="form-label">Fecha de Nacimiento: <span
-                                                        style="font-size: 10px;color: gray;"> yyyy/mm/dd</span></label>
-                                                <br />
-                                                <output id="fechaNacimientoSalida"><strong>  </strong></output>
-                                            </div>
-                                            <div class="col-md-4">
-                                                <label id="validationDefault06" class="form-label">Correo Electrónico:</label>
-                                                <output id="correoSalida"><strong>  </strong></output>
-                                            </div>
-                                            <div class="col-md-4">
-                                                <label id="validationDefault07" class="form-label">Celular:</label>
-                                                <output id="celularSalida"><strong> </strong></output>
-                                            </div>
-                                            <div class="col-md-4">
-                                                <label id="validationDefault08" class="form-label">Contraseña Actual:</label>
-                                                <output id="passwordSalida"><strong>  </strong></output>
-                                            </div>
-                                        </div>
+                                <div id="cal">
+                                    <div class="header">
+                                        <span class="left button" id="prev"> &lang; </span>
+                                        <span class="left hook"></span>
+                                        <span class="month-year" id="label"></span>
+                                        <span class="right hook"></span>
+                                        <span class="right button" id="next"> &rang; </span>
                                     </div>
-                         
-                                </div>
-                            </div>
-                            <div class="row card">
-                                <div id="listCapacitaciones">
-                                    <div class="col-12 text-left pt-4">
-                                        <h4 class="text-primary">Participación en Eventos</h4>
-                                    </div>
-                                    <table class="table text-center table-primary table-striped" id="dtTable">
-                                        <thead>
-                                            <tr>
-                                                <th scope="col">Tema del Evento</th>
-                                                <th scope="col">Fecha del Evento</th>
-                                                <th scope="col">Duración (en min)</th>
-                                           
-                                            </tr>
-                                        </thead>
-                                        <tbody id="bodyTableEventosRealizados">
-                                        </tbody>
+                                    <table id="days">
+                
+                                        <td>sun</td>
+                                        <td>mon</td>
+                                        <td>tue</td>
+                                        <td>wed</td>
+                                        <td>thu</td>
+                                        <td>fri</td>
+                                        <td>sat</td>
+                
                                     </table>
+                                    <div id="cal-frame">
+                                        <table class="curr">
+                                            <tbody id="nilbody">
+                
+                                            </tbody>
+                                        </table>
+                
+                                    </div>
                                 </div>
-                                </div>
+                         
+                
                         </div>
                     </div>
                 </div>
@@ -192,25 +160,13 @@
         integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
         crossorigin="anonymous"></script>
     <script type="text/javascript" src="resources/js/loginController.js"></script>
+    <script type="text/javascript" src="resources/js/eventoController.js"></script>
     <script type="text/javascript" src="resources/js/menu.js"></script>
     <script>
         window.onload = function () {
 
             buscarDataUserSesion();
-            if(sessionStorage.getItem("rolUser")=="1"){
-                buscarInfoAsistente();
-            }
-            if(sessionStorage.getItem("rolUser")=="2"){
-                buscarInfoAdministrador();
-            }
-            if(sessionStorage.getItem("rolUser")=="3"){
-                buscarInfoAyudante();
-            }
-            if(sessionStorage.getItem("rolUser")=="4"){
-                buscarInfoConferencista();
-                buscarConferenciasRealizadas();
-            }
-            permisosUserPerfil();
+            permisosUserInicio();
         }
     </script>
     <script>
@@ -233,6 +189,5 @@
         });
     </script>
 </body>
-
 
 </html>

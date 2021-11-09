@@ -11,176 +11,244 @@
         integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/b6764a4d50.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="resources/style/style.css">
+    <link rel="stylesheet" href="resources/style/menu.css">
 
 </head>
 
 
 <body>
     <div class="container-fluid">
-        <header class="bg-primary">
-            <a href="#"> <img id="logo" alt="Logo" src="resources/img/LOGO5.png" /></a>
-        </header>
-
-        <article>
-            <div class="text-center font-weight-light pt-5 ">
-                <h1>Registro de Administradores</h1>
-            </div>
-            <div class="flex">
-                <div class="card text-primary font-weight-normal formRegistro">
-                    <form class="row g-3" method="POST" action="http://localhost:4000/administrador">
-                        <div class=" col-md-12">
-                            <div class="userdata border-primary bg-light">
-
-
-                                <label for="validationDefault01" class="form-label">Nombre Usuario:</label>
-                                <input type="text" class="form-control" id="usuario" name="usuario"
-                                    placeholder="NickJones123..." required>
-                                <label for="validationDefault02" class="form-label">Contraseña:</label>
-                                <input type="password" class="form-control" id="password" name="password"
-                                    placeholder="**********" required>
-                            </div>
-                        </div>
-
-                        <div class="col-md-4">
-                            <label for="validationDefault03" class="form-label">Identificación:</label>
-                            <input type="text" class="form-control" id="identificacion" name="identificacion" required>
-                        </div>
-                        <div class="col-md-4">
-                            <label for="validationDefault04" class="form-label">Nombres:</label>
-                            <input type="text" class="form-control" id="nombre" name="nombre" required>
-                        </div>
-                        <div class="col-md-4">
-                            <label for="validationDefault05" class="form-label">Apellidos:</label>
-                            <input type="text" class="form-control" id="apellido" name="apellido" required>
-                        </div>
-
-                        <div class="col-md-6">
-                            <label for="validationDefault06" class="form-label">Fecha de Nacimiento:</label>
-                            <input type="date" class="form-control" id="fechaNacimiento" name="fechaNacimiento"
-                                required>
-                        </div>
-                        <div class="col-md-6">
-                            <label for="validationDefaultUsername" class="form-label">Correo Electrónico:</label>
-                            <div class="input-group">
-                                <span class="input-group-text" id="inputGroupPrepend2">@</span>
-                                <input type="text" class="form-control" id="correo" name="correo"
-                                    aria-describedby="inputGroupPrepend2" required>
-                            </div>
-                        </div>
-                        <div class="col-md-2" style="padding-top: 1%;">
-                            <label for="validationDefault07" class="form-label">Sexo:</label>
-                            <select class="form-select" id="sexo" name="sexo" required>
-                                <option selected disabled value="">Seleccione</option>
-                                <option>Femenino</option>
-                                <option>Masculino</option>
-                            </select>
-                        </div>
-                        <div class="col-md-3">
-                            <label for="validationDefault08" class="form-label">Telefono Celular</label>
-                            <input type="text" class="form-control" id="telefono" name="telefono" required>
-                        </div>
-                        <div class="col-12" style="padding-top: 10px;">
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="invalidCheck2" required>
-                                <label class="form-check-label font-weight-bold text-dark" for="invalidCheck2">
-                                    Acepto terminos y condiciónes
-                                </label>
-                            </div>
-                        </div>
-                        <div class="col-12 text-center">
-                            <button class="btn btn-primary" type="submit">Guardar Registro</button>
-                        </div>
-                    </form>
-                </div>
-                <div id="list">
-                    <div class="col-12 text-center pt-4">
-                        <h1 class="text-primary">Admin Registrados</h1>
+        <div class='dashboard'>
+            <div class="dashboard-nav">
+                <header><a href="#!" class="menu-toggle"><i class="fas fa-bars"></i></a><a href="#"
+                        class="brand-logo"><i class="fas fa-anchor"></i> <span>SRAL 21</span></a></header>
+                <nav class="dashboard-nav-list">
+                    <div class="dashboard-nav-item ">
+                        <a href="Inicio.html"><i class="fas fa-home"></i>
+                            Inicio </a>
                     </div>
-                    <table class="table text-center table-primary table-striped" id="dtTable">
-                        <thead>
-                            <tr>
-                                <th scope="col">Identificación</th>
-                                <th scope="col">Nombre</th>
-                                <th scope="col">Apellido</th>
-                                <th scope="col">Sexo</th>
-                                <th scope="col">Correo</th>
-                                <th scope="col">Usuario</th>
-
-                                <th scope="col" class="text-center">Accion</th>
-                            </tr>
-                        </thead>
-                        <tbody id="bodyTableAdmins">
-                        </tbody>
-                    </table>
-                </div>
-                <div id="editData" hidden class="formRegistro">
-                    <form class="row g-3" hi action="">
-                        <div class="col-md-12">
-
-                            <input type="hidden" class="form-control" id="_id" name="_id" required>
+                    <div class="dashboard-nav-item" id="verEventos">
+                        <a href="MisEventos.html"><i class="fas fa-calendar"></i> Ver Eventos </a>
+                    </div>
+                    <div class="dashboard-nav-item" id="regEventos">
+                        <a href="RegistroEvento.html"><i class="fas fa-cogs"></i> Registrar Eventos </a>
+                    </div>
+                    <div class="dashboard-nav-item active" id="regAdministradores">
+                        <a href="RegistroUsuario.html"><i class="fas fa-cogs"></i> Registrar Administradores </a>
+                    </div>
+                    <div class="dashboard-nav-item" id="regConferencistas">
+                        <a href="RegistroConferencista.html"><i class="fas fa-cogs"></i> Registrar Conferencistas </a>
+                    </div>
+                    <div class="dashboard-nav-item" id="regEventosConferencistas">
+                        <a href="EventosAsociados.html"><i class="fas fa-book"></i> Eventos a Cargo  </a>
+                    </div>
+                    <div class="dashboard-nav-item" id="regAyudantes">
+                        <a href="RegistroAyudantes.html"><i class="fas fa-cogs"></i> Registrar Ayudantes </a>
+                    </div>
+                    <div class="dashboard-nav-item" id="regAsistentesEventos">
+                        <a href="RegistroAsistentesEvento.html"><i class="fas fa-cogs"></i> Inscribir Asistentes a
+                            Eventos </a>
+                    </div>
+                    <div class="dashboard-nav-item" id="regbuscarAsistentesEventos">
+                        <a href="buscarAsistentesEventos.html"><i class="fas fa-search"></i> Ver Asistentes a Eventos </a>
+                    </div>
+                    <div class="dashboard-nav-item" id="miPerfil">
+                        <a href="PerfilUsuario.html"><i class="fas fa-user"></i> Mi Perfil </a>
+                    </div>
+                    <div class="dashboard-nav-item" id="regControlAsistentes">
+                        <a href="RegistroAsistentes.html"><i class="fas fa-user"></i> Registrar Asistentes </a>
+                    </div>
+                    <div class="dashboard-nav-item" id="regAsistentesRolAyudante">
+                        <a href="RegistroAsistentes.html"><i class="fas fa-user"></i> Registrar Asistentes </a>
+                    </div>
+                    <div class="nav-item-divider"></div>
+                    <div class="dashboard-nav-item text-left pl-2 pt-1" style="    display: flex;
+                                    flex-direction: column;">
+                        <div class="col md-12">
+                            <h4 class="text-left pl-0 text-light"><strong>Bienvenido! </strong></h4>
                         </div>
-                        <div class=" col-md-12">
-                            <div class="userdata border-primary bg-light">
+                        <div class="col md-12 text-light text-uppercase">
+                            <output id="nameUserSesion"></output><br></br>
+                            <output id="rol" class="pt-0" style="font-size: 10px;font-weight: 400;"></output>
+                        </div>
+                    </div>
+                    <div class="nav-item-divider"></div>
+                    <div class="dashboard-nav-item">
+                        <a href="#" onclick="cerrarSesion();"><i class="fas fa-sign-out-alt"></i> Logout </a>
+                    </div>
+                </nav>
+            </div>
+            <div class='dashboard-app'>
+                <header class='dashboard-toolbar'><a href="#!" class="menu-toggle"><i class="fas fa-bars"></i></a>
+                </header>
+                <div class='dashboard-content'>
+                    <div class="text-center font-weight-light pt-1 ">
+                        <h1>Registro de Administradores</h1>
+                    </div>
+                    <div class="flex">
+                        <div class="card text-primary font-weight-normal formRegistro">
+                            <form class="row g-3" method="POST" action="http://localhost:4000/administrador">
+                                <div class=" col-md-12">
+                                    <div class="userdata border-primary bg-light">
 
 
-                                <label for="usuarioA" class="form-label">Nombre Usuario:</label>
-                                <input type="text" class="form-control" id="usuarioA" name="usuarioA"
-                                    placeholder="NickJones123..." required>
-                                <label for="passwordA" class="form-label">Contraseña:</label>
-                                <input type="password" class="form-control" id="passwordA" name="passwordA"
-                                    placeholder="**********" required>
+                                        <label for="validationDefault01" class="form-label">Nombre Usuario:</label>
+                                        <input type="text" class="form-control" id="usuario" name="usuario"
+                                            placeholder="NickJones123..." required>
+                                        <label for="validationDefault02" class="form-label">Contraseña:</label>
+                                        <input type="password" class="form-control" id="password" name="password"
+                                            placeholder="**********" required>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-4">
+                                    <label for="validationDefault03" class="form-label">Identificación:</label>
+                                    <input type="text" class="form-control" id="identificacion" name="identificacion"
+                                        required>
+                                </div>
+                                <div class="col-md-4">
+                                    <label for="validationDefault04" class="form-label">Nombres:</label>
+                                    <input type="text" class="form-control" id="nombre" name="nombre" required>
+                                </div>
+                                <div class="col-md-4">
+                                    <label for="validationDefault05" class="form-label">Apellidos:</label>
+                                    <input type="text" class="form-control" id="apellido" name="apellido" required>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label for="validationDefault06" class="form-label">Fecha de Nacimiento:</label>
+                                    <input type="date" class="form-control" id="fechaNacimiento" name="fechaNacimiento"
+                                        required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="validationDefaultUsername" class="form-label">Correo
+                                        Electrónico:</label>
+                                    <div class="input-group">
+                                        <span class="input-group-text" id="inputGroupPrepend2">@</span>
+                                        <input type="text" class="form-control" id="correo" name="correo"
+                                            aria-describedby="inputGroupPrepend2" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-2" style="padding-top: 1%;">
+                                    <label for="validationDefault07" class="form-label">Sexo:</label>
+                                    <select class="form-select" id="sexo" name="sexo" required>
+                                        <option selected disabled value="">Seleccione</option>
+                                        <option>Femenino</option>
+                                        <option>Masculino</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-3">
+                                    <label for="validationDefault08" class="form-label">Telefono Celular</label>
+                                    <input type="text" class="form-control" id="telefono" name="telefono" required>
+                                </div>
+                                <div class="col-12" style="padding-top: 10px;">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="invalidCheck2"
+                                            required>
+                                        <label class="form-check-label font-weight-bold text-dark" for="invalidCheck2">
+                                            Acepto terminos y condiciónes
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-12 text-center">
+                                    <button class="btn btn-primary" type="submit">Guardar Registro</button>
+                                </div>
+                            </form>
+                        </div>
+                        <div id="list">
+                            <div class="col-12 text-center pt-1">
+                                <h1 class="text-primary">Admin Registrados</h1>
                             </div>
-                        </div>
+                            <table class="table text-center table-primary table-striped" id="dtTable">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Identificación</th>
+                                        <th scope="col">Nombre</th>
+                                        <th scope="col">Apellido</th>
+                                        <th scope="col">Sexo</th>
+                                        <th scope="col">Correo</th>
+                                        <th scope="col">Usuario</th>
 
-                        <div class="col-md-4">
-                            <label for="validaidentificacionAtionDefault03" class="form-label">Identificación:</label>
-                            <input type="text" class="form-control" id="identificacionA" name="identificacionA"
-                                required>
+                                        <th scope="col" class="text-center">Accion</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="bodyTableAdmins">
+                                </tbody>
+                            </table>
                         </div>
-                        <div class="col-md-4">
-                            <label for="nombreA" class="form-label">Nombres:</label>
-                            <input type="text" class="form-control" id="nombreA" name="nombreA" required>
-                        </div>
-                        <div class="col-md-4">
-                            <label for="apellidoA" class="form-label">Apellidos:</label>
-                            <input type="text" class="form-control" id="apellidoA" name="apellidoA" required>
-                        </div>
+                        <div id="editData" hidden class="formRegistro">
+                            <form class="row g-3"  action="">
+                                <div class="col-md-12">
 
-                        <div class="col-md-6">
-                            <label for="fechaNacimientoA" class="form-label">Fecha de Nacimiento:</label>
-                            <input type="date" class="form-control" id="fechaNacimientoA" name="fechaNacimientoA"
-                                required>
-                        </div>
-                        <div class="col-md-6">
-                            <label for="correoA" class="form-label">Correo Electrónico:</label>
-                            <div class="input-group">
-                                <span class="input-group-text" id="inputGroupPrepend2">@</span>
-                                <input type="text" class="form-control" id="correoA" name="correoA"
-                                    aria-describedby="inputGroupPrepend2" required>
-                            </div>
-                        </div>
-                        <div class="col-md-2" style="padding-top: 1%;">
-                            <label for="sexoA" class="form-label">Sexo:</label>
-                            <select class="form-select" id="sexoA" name="sexoA" required>
-                                <option selected disabled value="">Seleccione</option>
-                                <option>Femenino</option>
-                                <option>Masculino</option>
-                            </select>
-                        </div>
-                        <div class="col-md-3">
-                            <label for="telefonoA" class="form-label">Telefono Celular</label>
-                            <input type="text" class="form-control" id="telefonoA" name="telefonoA" required>
-                        </div>
+                                    <input type="hidden" class="form-control" id="_id" name="_id" required>
+                                </div>
+                                <div class=" col-md-12">
+                                    <div class="userdata border-primary bg-light">
 
-                        <div class="col-12 pt-3 text-center">
-                            <button class="btn btn-success" onclick="guardarCambiosAdmin()" type="submit">Guardar
-                                Cambios</button>
-                                <button class="btn btn-danger" onclick="cancelEdit()" type="submit">Cancelar</button>
+
+                                        <label for="usuarioA" class="form-label">Nombre Usuario:</label>
+                                        <input type="text" class="form-control" id="usuarioA" name="usuarioA"
+                                            placeholder="NickJones123..." required>
+                                        <label for="passwordA" class="form-label">Contraseña:</label>
+                                        <input type="password" class="form-control" id="passwordA" name="passwordA"
+                                            placeholder="**********" required>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-4">
+                                    <label for="validaidentificacionAtionDefault03"
+                                        class="form-label">Identificación:</label>
+                                    <input type="text" class="form-control" id="identificacionA" name="identificacionA"
+                                        required>
+                                </div>
+                                <div class="col-md-4">
+                                    <label for="nombreA" class="form-label">Nombres:</label>
+                                    <input type="text" class="form-control" id="nombreA" name="nombreA" required>
+                                </div>
+                                <div class="col-md-4">
+                                    <label for="apellidoA" class="form-label">Apellidos:</label>
+                                    <input type="text" class="form-control" id="apellidoA" name="apellidoA" required>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label for="fechaNacimientoA" class="form-label">Fecha de Nacimiento:</label>
+                                    <input type="date" class="form-control" id="fechaNacimientoA"
+                                        name="fechaNacimientoA" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="correoA" class="form-label">Correo Electrónico:</label>
+                                    <div class="input-group">
+                                        <span class="input-group-text" id="inputGroupPrepend2">@</span>
+                                        <input type="text" class="form-control" id="correoA" name="correoA"
+                                            aria-describedby="inputGroupPrepend2" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-2" style="padding-top: 1%;">
+                                    <label for="sexoA" class="form-label">Sexo:</label>
+                                    <select class="form-select" id="sexoA" name="sexoA" required>
+                                        <option selected disabled value="">Seleccione</option>
+                                        <option>Femenino</option>
+                                        <option>Masculino</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-3">
+                                    <label for="telefonoA" class="form-label">Telefono Celular</label>
+                                    <input type="text" class="form-control" id="telefonoA" name="telefonoA" required>
+                                </div>
+
+                                <div class="col-12 pt-3 text-center">
+                                    <button class="btn btn-success" onclick="guardarCambiosAdmin()"
+                                        type="submit">Guardar
+                                        Cambios</button>
+                                    <button class="btn btn-danger" onclick="cancelEdit()"
+                                        type="submit">Cancelar</button>
+                                </div>
+                            </form>
                         </div>
-                    </form>
+                    </div>
                 </div>
             </div>
-        </article>
+        </div>
     </div>
     <footer>
 
@@ -194,6 +262,15 @@
         integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
         crossorigin="anonymous"></script>
     <script type="text/javascript" src="resources/js/adminController.js"></script>
+    <script type="text/javascript" src="resources/js/loginController.js"></script>
+    <script type="text/javascript" src="resources/js/menu.js"></script>
+    <script>
+        window.onload = function () {
+
+            buscarDataUserSesion();
+            permisosUserRegAdministradores();
+        }
+    </script>
     <script>
         $(document).ready(function () {
 

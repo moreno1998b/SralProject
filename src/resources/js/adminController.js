@@ -16,6 +16,7 @@ function cargarListadoAdmins() {
             }
         });
     });
+
     //    document.getElementById('editForm').setAttribute('hidden',);
 }
 cargarListadoAdmins();
@@ -42,14 +43,16 @@ function editarAdmin(data) {
             if (err)
                 // alert(err);
                 document.getElementById("editData").removeAttribute("hidden");
-// document.getElementById().setAttribute
+            // document.getElementById().setAttribute
             if (data != null) {
                 debugger
+                var componentesFecha = data.fechaNacimiento.split("T");
+                var date = componentesFecha[0];
                 document.getElementById("_id").value = data._id;
                 document.getElementById("nombreA").value = data.nombre;
                 document.getElementById("identificacionA").value = data.identificacion;
                 document.getElementById("apellidoA").value = data.apellido;
-                document.getElementById("fechaNacimientoA").value = data.fechaNacimiento;
+                document.getElementById("fechaNacimientoA").value = date;
                 document.getElementById("correoA").value = data.correo;
                 document.getElementById("sexoA").value = data.sexo;
                 document.getElementById("telefonoA").value = data.telefono;
@@ -101,8 +104,8 @@ function guardarCambiosAdmin() {
     location.reload();
 
 }
-function cancelEdit(){
-    $("#editData").attr('hidden'); 
+function cancelEdit() {
+    $("#editData").attr('hidden');
     location.reload();
 
 }
