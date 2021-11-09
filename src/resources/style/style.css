@@ -218,8 +218,9 @@ footer {
   height: 70px;
 }
 .cardSection {
-  background-image: url("../img/servers.jpg");
+  background-image: url("../img/PROFILE.jpeg");
   background-repeat: no-repeat;
+  background-size: 100%;
 }
 .subtitle {
   color: white !important;
